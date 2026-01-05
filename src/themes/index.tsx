@@ -1,0 +1,85 @@
+export const Colors = {
+  // background
+  ui_light_bg: '#84A2A5',
+  ui_ultra_light_bg: '#B7C6C7',
+  ui_superSoft_light_bg: '#DDE4E5',
+  // ui_dark_bg: '#3F7A80',
+  ui_dark_bg: '#2E5C61',
+  // button_dark_bg: '#86A5A8',
+  button_dark_bg: '#2E5C61',
+  soft_bg: '#86A5A8',
+  lite_bg: '#F7FBFB',
+  // text color
+  dark_text_color: '#113730',
+  semi_dark_text_color: '#3F7A80',
+  color_light_text_color: '#42A391',
+  color_low_light_text_color: '#66898C',
+  color_white: '#ffffff',
+  color_black: '#222222',
+  color_gray: '#7E7B7B',
+  color_yellow: '#FFE606',
+  color_light_gray: '#F5F5F5',
+  color_semi_dark_gray: '#B3B3B3',
+  color_dark_gray: '#646464',
+  shadow_light: 'gray',
+  color_soft_green: '#05CD99',
+  color_dark_green: '#117A00',
+  color_glow_green: '#00BF00',
+  color_light_red: '#FF5A54',
+  color_dark_red: '#CC0000',
+  color_blue_link: '#2F6EFF',
+  color_dark_orange: '#FDA100',
+  color_active_stepper: '#AFE9A6',
+  color_like_disabled: '#95AEB1',
+};
+
+export const Fonts = {
+  // Poppins
+  poppins300Light: 'Poppins-Light',
+  poppins400Regular: 'Poppins-Regular',
+  poppins500Medium: 'Poppins-Medium',
+  poppins600SemiBold: 'Poppins-SemiBold',
+  poppins700Bold: 'Poppins-Bold',
+  // Open Sans
+  OpenSans300Light: 'OpenSans-Light',
+  OpenSans400Regular: 'OpenSans-Regular',
+  OpenSans500Medium: 'OpenSans-Medium',
+  OpenSans600SemiBold: 'OpenSans-SemiBold',
+  OpenSans700Bold: 'OpenSans-Bold',
+  //PollerOne-Regular
+  PollerOneRegular: 'PollerOne-Regular',
+};
+
+
+export const AppImages = {
+  Paper: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/paper.png',
+  Avatar: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/avatar.png',
+  NoImagesAvailable: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/no_image_available.jpg',
+  NoImagesAvailableTransparent: 'https://bpilmobile.bergerindia.com/virtuAL_DOCS/suVIDHA_API/Application/Application_Image/no_image_available-removebg.png',
+  MapLocation: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/location.png',
+  ScrachCard: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/scrachCard-min.png',
+  CancelBlack: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/cancel-black.png',
+  noTools: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/no_Tools_image_available-no_bg.png',
+  // Lotty
+  LottyDocument: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/document.json',
+  LottyAlert: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/alert.json',
+  LottyAnimationSuccess: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/animation-success.json',
+  LottyConfetti: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/confetti.json',
+  LottyError: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/error.json',
+  LottyGiftBox: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/giftBox.json',
+  LottyKyc: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/kyc.json',
+  LottyLWReward: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/L&W_Reward.json',
+  LottyLoader: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/Loader-Annimation.json',
+  LottyloaderDot: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/loaderDot.json',
+  LottyNoNet: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/NoNet.json',
+  LottyPending: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/pending.json',
+  LottyRejected: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/rejected.json',
+  LottySandClock: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/sand-clock.json',
+  LottyScanToken: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/scanToken.json',
+  LottySchemeGift: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/schemeGift.json',
+  LottySuccessAnimation: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/successAnimation.json',
+  LottyTimer: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/timer.json',
+  LottyVisitRunning: 'https://bpilmobile.bergerindia.com/VIRTUAL_DOCS/SUVIDHA_API/Application/Application_Image/lotty/visitRunning.json',
+  //LottyLeadsRunning: "C:\Users\Administrator\Downloads\VisitLeadRuning.json",
+
+}
