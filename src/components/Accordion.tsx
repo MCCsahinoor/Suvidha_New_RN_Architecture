@@ -71,7 +71,7 @@ const Accordion = (props: any) => {
       <TouchableOpacity
         activeOpacity={0.7}
         style={styles.btnStyle}
-        onPress={toggleButton} disabled={!isLock}>
+        onPress={toggleButton} disabled={isLock || isDisable}>
         <View style={{
           display: "flex",
           justifyContent: "flex-start",

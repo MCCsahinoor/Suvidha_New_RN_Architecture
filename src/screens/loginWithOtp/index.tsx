@@ -18,8 +18,7 @@ import BottomSheet from '../../components/BottomSheet';
 import { phoneNumberRegex } from '../../utils/regexList';
 import { GetUserProfile } from '../../services/Profile/Profile.services';
 import { setProfileData } from '../../store/features/userProfile/profileSlice';
-import { executiveLoginCheckReducer } from '../../store/features/login/executiveLoginCheck';
-import FourDigitInput from '../../components/OTPInputFieldCustom';
+import { executiveLoginCheckReducer } from '../../store/features/login/executiveLoginCheck'; 
 import { appLanguageCheckReducer } from '../../store/features/appLanguage/appLanguageChange';
 import { useTranslation } from 'react-i18next';
 import { setuserApplicableDepotCodeHandler } from '../../store/features/login/loginUserDepotData'; 
@@ -27,6 +26,7 @@ import { CommonToastModel } from '../../utils/ToastMessageModel';
 import { Button } from 'react-native';
 import CustomCheckbox from '../../components/CustomCheckbox';
 import CustomBottomSheet from '../../components/CustomBottomSheet';
+import OTPInputCustom from '../../components/OTPInputFieldCustom';
 
 const LoginScreen = ({ navigation }: any) => {
   // FOR OTP BOTTOM SHEET
@@ -452,7 +452,7 @@ const LoginScreen = ({ navigation }: any) => {
               {formatTime(time.minutes, time.seconds)}
             </Text>
             <Pressable style={styles.container} onPress={Keyboard.dismiss}> 
-              <FourDigitInput onOtpChange={handleOtpChange} onOtpComplete={handleOtpComplete} onReset={reset} />
+              <OTPInputCustom onOtpChange={handleOtpChange} onOtpComplete={handleOtpComplete} onReset={reset} />
             </Pressable>
             <Text style={styles.resendText}>
               {t("IDidntReceiveAnyCode")} {' '}

@@ -64,7 +64,8 @@ const phoneNumberInput = ({
               style={{
                 fontSize: 17,
                 color: Colors.color_black,
-                fontFamily: Fonts.OpenSans600SemiBold
+                fontFamily: Fonts.OpenSans600SemiBold,
+                marginRight: 5
               }}>
               +91</Text>
 
@@ -73,9 +74,8 @@ const phoneNumberInput = ({
                 width: countryFlag === true ? '67%' : '80%',
                 fontSize: 17,
                 marginTop: Platform.OS === 'android' ? 4 : 1,
-                color: Colors.color_black,
-                fontFamily: Fonts.OpenSans600SemiBold,
-                paddingLeft: Platform.OS === 'android' ? 0 : 10
+                color: Colors.color_black, 
+                paddingLeft: Platform.OS === 'android' ? 0 : 10, 
               }}
               keyboardType={keyboardType}
               secureTextEntry={false}
@@ -85,7 +85,7 @@ const phoneNumberInput = ({
               onKeyPress={e => (onKeyPress ? onKeyPress(e) : null)}
               onChangeText={number => onChange(number)}
               maxLength={maxLength}
-              defaultValue={defaultValue}
+              {...(defaultValue ? { defaultValue } : {})}
             />
           </View>
         </View>

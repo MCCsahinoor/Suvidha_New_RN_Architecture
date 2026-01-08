@@ -1,0 +1,44 @@
+import React from 'react';
+import Svg, { Path } from 'react-native-svg';
+import { SvgProps } from 'react-native-svg';
+
+interface CallWhiteIconProps extends SvgProps {
+  width?: number | string;
+  height?: number | string;
+  strokeColor?: string;
+  strokeWidth?: number | string;
+}
+
+const CallWhiteIcon: React.FC<CallWhiteIconProps> = ({
+  width = 10,
+  height = 10,
+  strokeColor = 'white',
+  strokeWidth = 1,
+  ...props
+}) => {
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 10 10"
+      fill="none"
+      {...props}
+    >
+      <Path
+        d="M1.57417 4.97596C1.17916 4.28719 0.988433 3.72476 0.873428 3.15465C0.703339 2.31147 1.09258 1.48782 1.7374 0.96226C2.00993 0.740139 2.32234 0.816029 2.4835 1.10515L2.84732 1.75786C3.1357 2.27522 3.27989 2.53389 3.25129 2.80814C3.22269 3.08239 3.02823 3.30576 2.63932 3.75248L1.57417 4.97596ZM1.57417 4.97596C2.37371 6.37009 3.62843 7.62551 5.02418 8.42597M5.02418 8.42597C5.71295 8.82098 6.27538 9.01171 6.84549 9.12671C7.68867 9.2968 8.51233 8.90756 9.03788 8.26274C9.26 7.99021 9.18411 7.6778 8.895 7.51665L8.24229 7.15282C7.72493 6.86444 7.46625 6.72025 7.192 6.74885C6.91775 6.77745 6.69439 6.97191 6.24766 7.36083L5.02418 8.42597Z"
+        stroke={strokeColor}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M5.8335 2.84658C6.42652 3.09841 6.90174 3.57363 7.15357 4.16665M6.10601 0.833313C7.57984 1.25863 8.74146 2.4202 9.16683 3.89399"
+        stroke={strokeColor}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+};
+
+export default CallWhiteIcon;
+

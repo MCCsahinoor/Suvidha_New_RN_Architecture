@@ -1,0 +1,43 @@
+import React from 'react';
+import Svg, { Path } from 'react-native-svg';
+import { SvgProps } from 'react-native-svg';
+
+interface WhatsAppProps extends SvgProps {
+  width?: number | string;
+  height?: number | string;
+  strokeColor?: string;
+  strokeWidth?: number | string;
+}
+
+const WhatsAppIcon: React.FC<WhatsAppProps> = ({
+  width = 20,
+  height = 20,
+  strokeColor = '#2D264B',
+  strokeWidth = 1.5,
+  ...props
+}) => {
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 20 20"
+      fill="none"
+      {...props}
+    >
+      <Path
+        d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 11.241 1.25117 12.4233 1.70544 13.4989C1.9565 14.0933 2.08203 14.3906 2.09758 14.6152C2.11312 14.8398 2.047 15.0869 1.91477 15.5811L1 19L4.41889 18.0852C4.9131 17.953 5.1602 17.8869 5.38482 17.9024C5.60945 17.918 5.90667 18.0435 6.50111 18.2946C7.5767 18.7488 8.75902 19 10 19Z"
+        stroke={strokeColor}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M6.92934 10.3396L7.71318 9.36608C8.04354 8.95577 8.45195 8.57376 8.48392 8.02743C8.49199 7.88945 8.3949 7.26991 8.20072 6.03088C8.12441 5.54393 7.66978 5.5 7.27599 5.5C6.76283 5.5 6.50625 5.5 6.25146 5.61638C5.92943 5.76348 5.59881 6.17708 5.52626 6.5236C5.46885 6.79777 5.51151 6.98668 5.59683 7.36452C5.9592 8.96933 6.80933 10.5543 8.12753 11.8725C9.44574 13.1907 11.0307 14.0408 12.6355 14.4032C13.0133 14.4885 13.2022 14.5311 13.4764 14.4737C13.8229 14.4012 14.2365 14.0706 14.3836 13.7485C14.5 13.4938 14.5 13.2372 14.5 12.724C14.5 12.3302 14.4561 11.8756 13.9691 11.7993C12.7301 11.6051 12.1106 11.508 11.9726 11.5161C11.4262 11.5481 11.0442 11.9565 10.6339 12.2868L9.6604 13.0707"
+        stroke={strokeColor}
+        strokeWidth={strokeWidth}
+      />
+    </Svg>
+  );
+};
+
+export default WhatsAppIcon;
+

@@ -30,6 +30,7 @@ AXIOS_HTTP.interceptors.request.use(
   async request => {
     const userToken = await AsyncStorage.getItem(LOCAL_STORAGE_KEY.TOKEN);
     const token = userToken?.slice(1, -1);
+    console.log("token", token);
     const appLanguage = await AsyncStorage.getItem(LOCAL_STORAGE_KEY.LANGUAGE_SELECT);
     const appLanguageSlice = appLanguage?.slice(1, -1);
     if (request.url?.includes('UploadDocument')) {
@@ -72,9 +73,10 @@ AXIOS_HTTP.interceptors.response.use(
   }, async error => {
     if (error.code == 'ERR_NETWORK') {
       CommonToastModel('error', 'Network connection failed.Please check your internet connection and try again.', 5000);
+      return Promise.reject(error);
     }
     const originalRequest = error.config;
-    if (error.response.status === 401 && !originalRequest._retry) {
+    if (error.response && error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       let _localrefreshToken: any = await AsyncStorage.getItem(LOCAL_STORAGE_KEY.REFRESH_TOKEN);
       let _refreshToken = _localrefreshToken?.slice(1, -1);
@@ -112,10 +114,10 @@ AXIOS_HTTP.interceptors.response.use(
           redirectLogin.navigate('SplashScreen');
         }
       }
-    } else if (error.response.status !== 401) {
-      CommonToastModel('error', error.response.data.errorMessage ? error.response.data.errorMessage : 'Something went wrong! Please try again sometime.', 8000);
-    }
-    return Promise.reject(new Error(error));
+    } else if (error.response && error.response.status !== 401) {
+      CommonToastModel('error', error.response.data?.errorMessage ? error.response.data.errorMessage : 'Something went wrong! Please try again sometime.', 8000);
+    } 
+    return Promise.reject(error);
   });
 
 
@@ -175,8 +177,9 @@ AXIOS_HTTP_ESAMBANDH_UTILITY_ORDER.interceptors.response.use(
   error => {
     if (error.code == 'ERR_NETWORK') {
       CommonToastModel('error', 'Network connection failed.Please check your internet connection and try again.', 5000);
+      return Promise.reject(error);
     }
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       console.log('Unauthorized: Invalid or missing token.');
       return Promise.reject(new Error("Unauthorized: Invalid or missing token."));
     }

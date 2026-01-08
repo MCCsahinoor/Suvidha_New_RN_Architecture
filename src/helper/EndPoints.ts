@@ -240,8 +240,8 @@ export const ENDPOINTS = {
   ...ALL_ENDPOINTS,
 };
 
-// export const BASE_URL = ENDPOINTS.BASE_URL_DEV; // ---- UAT URL
-export const BASE_URL = ENDPOINTS.BASE_URL_PROD; // ---- Live URL
+export const BASE_URL = ENDPOINTS.BASE_URL_DEV; // ---- UAT URL
+// export const BASE_URL = ENDPOINTS.BASE_URL_PROD; // ---- Live URL
 
 // SIGNALR
 export const BASE_URL_SIGNLAR = "https://bpilweb.bergerindia.com/signalr/";

@@ -42,9 +42,8 @@ const CustomHeaderWithBack = ({ header, title, navigation, noOtherOption }: any)
 
   return (
     <View>
-      <LinearGradient colors={['#36686D', '#84A2A5']} useAngle={true} angle={90} >
-        <SafeAreaView>
-          <View style={{ ...styles.headerContainer, paddingTop: Platform.OS === 'android' ? 60 : 0, }}>
+      <LinearGradient colors={['#36686D', '#84A2A5']} useAngle={true} angle={90} > 
+          <View style={{ ...styles.headerContainer, paddingTop: Platform.OS === 'android' ? 50 : 0, }}>
             <View style={{
               display: 'flex',
               flexDirection: 'row',
@@ -90,8 +89,7 @@ const CustomHeaderWithBack = ({ header, title, navigation, noOtherOption }: any)
               </View>
 
             )}
-          </View>
-        </SafeAreaView>
+          </View> 
       </LinearGradient>
     </View>
   );

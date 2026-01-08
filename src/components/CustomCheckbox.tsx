@@ -25,7 +25,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
   label,
   labelPosition = 'right',
   size = 24,
-  checkedColor = Colors.color_soft_green,
+  checkedColor = Colors.ui_dark_bg,
   uncheckedColor = Colors.color_white,
   borderColor = Colors.color_semi_dark_gray,
   disabled = false,
