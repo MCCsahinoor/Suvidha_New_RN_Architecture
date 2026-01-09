@@ -12,8 +12,7 @@ const PendingLeadAcceptCard: FC<any> = ({ navigation }) => {
     const { status, error, pendingLeads } = useSelector((state: any) => state.PendingLeadsData);
 
     return (
-        <>
-            {/* <Text>{JSON.stringify(pendingLeads, null, 4)}</Text> */}
+        <> 
             {pendingLeads && pendingLeads.length > 0 && (
                 <Pressable onPress={() => navigation.navigate('NewLeads')} >
                     <View style={{ margin: 15 }}>

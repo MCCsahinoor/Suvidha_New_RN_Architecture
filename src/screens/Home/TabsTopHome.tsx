@@ -40,7 +40,7 @@ function HomeTabsTop({ navigation }: any) {
         selectedItemTextColor={Colors.color_white}
         otherItemTextColor={Colors.ui_light_bg}
       />
-      {selectedSwitchValue === 'business' && <HomeBenefit />}
+      {selectedSwitchValue === 'business' && <HomeBenefit navigation={navigation} />}
       {selectedSwitchValue === 'quickLinks' && <HomeQuickLinks navigation={navigation} />}
       {selectedSwitchValue === 'tutorials' && <HomeTutoaials />}
     </>
